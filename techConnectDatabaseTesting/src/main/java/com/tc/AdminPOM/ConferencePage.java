@@ -71,6 +71,9 @@ public class ConferencePage {
 	 public @FindBy(xpath = "(//i[@class='bi bi-three-dots-vertical'])[1]")
 	 WebElement threeDotsMenu;
 	 
+	 public @FindBy(xpath = "//i[@class='bi bi-pencil-fill me-2']")
+	 WebElement detailsButton;
+	 
 	 public @FindBy(xpath = "(//i[@class=\"bi bi-trash me-2\"])[1]")
 	 WebElement deleteButton;
 	 
@@ -79,6 +82,37 @@ public class ConferencePage {
 	 
 	 public @FindBy(xpath = "//button[contains(text(),'Reset')]")
 	 WebElement  resetButton;
+	 
+	 public @FindBy(xpath = "//div[@class='card-body']")
+	 List<WebElement> filter_Cards;
+	 
+	 public @FindBy(xpath = "//div[@class='card-header border-bottom ']")
+	 WebElement  attendeesTab;
+	 
+	 public @FindBy(xpath = "//table[@class='align-middle table']/tbody/tr")
+	 List<WebElement> attendeesList;
+	 
+	 public @FindBy(xpath = "//table[@class='align-middle table']/tbody/tr/td[2]")
+	 List<WebElement> attendeeNames;
+	 
+	 public @FindBy(xpath = "//table[@class='align-middle table']/tbody/tr/td[3]")
+	 List<WebElement> attendeeEmail;
+	 
+	 public @FindBy(xpath="//table[@class='align-middle table']/tbody/tr/td[4]")
+	 List<WebElement> ticketName;
+	 
+	 public @FindBy(xpath="//table[@class='align-middle table']/tbody/tr/td[5]")
+	 List<WebElement> ticketPrice;
+	 
+	 public @FindBy(xpath="//table[@class='align-middle table']/tbody/tr/td[6]")
+	 List<WebElement> purchaseDate;
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 	 
 	 

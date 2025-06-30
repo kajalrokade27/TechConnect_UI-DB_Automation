@@ -1,4 +1,4 @@
-package validLoginTesting;
+package mappingUIWithDB;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +23,7 @@ public class UserValidation extends AdminBaseClass
 {
 	DBUtility dbUtil = new DBUtility();
 	
-    // Add a user with valid input and verify it is present in the database
+    // Add a user with valid input and verify the user  present in the database
     @Test(priority=1)
     public void addUsersWithValidInput() throws EncryptedDocumentException, IOException, InterruptedException, SQLException
     {

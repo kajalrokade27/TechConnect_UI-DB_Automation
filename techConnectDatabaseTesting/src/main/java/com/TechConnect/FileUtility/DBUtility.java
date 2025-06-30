@@ -44,6 +44,43 @@ public class DBUtility {
 		rs = pstmt.executeQuery();
 		return rs;
 	}
+    public boolean isSponsorPresent(String sponsorName) throws SQLException {
+        String query = "SELECT company_name FROM sponsors WHERE company_name = ?";
+        pstmt = conn.prepareStatement(query);
+        pstmt.setString(1, sponsorName);
+        rs = pstmt.executeQuery();
+        boolean exists = rs.next();
+        rs.close();
+        pstmt.close();
+        return exists;
+    }
+    public boolean isAttendeePresent(String attendeeEmail, String eventName) throws SQLException {
+        String query = "SELECT attendee_email FROM attendees WHERE attendee_email = ? AND event_name = ?";
+        pstmt = conn.prepareStatement(query);
+        pstmt.setString(1, attendeeEmail);
+        pstmt.setString(2, eventName);
+        rs = pstmt.executeQuery();
+        boolean exists = rs.next();
+        rs.close();
+        pstmt.close();
+        return exists;
+    }
+
+    public int getAttendeeCountForEvent(String eventName) throws SQLException {
+        String query = "SELECT COUNT(*) FROM attendees WHERE event_name = ?";
+        pstmt = conn.prepareStatement(query);
+        pstmt.setString(1, eventName);
+        rs = pstmt.executeQuery();
+        int count = 0;
+        if (rs.next()) 
+        {
+            count = rs.getInt(1);
+        }
+        rs.close();
+        pstmt.close();
+        return count;
+    }
+
     public void closeConn() throws SQLException 
     {
         if (rs != null) rs.close();

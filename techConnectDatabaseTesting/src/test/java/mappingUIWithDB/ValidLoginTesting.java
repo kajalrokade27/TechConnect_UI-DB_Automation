@@ -1,4 +1,4 @@
-package validLoginTesting;
+package mappingUIWithDB;
 
 import java.io.IOException;
 import java.sql.ResultSet;

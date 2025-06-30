@@ -27,6 +27,27 @@ public class SponsorsPage
 	 public @FindBy(xpath="//input[@class='form-control']")
 	 List<WebElement> sponsor_fields;
 	 
+	 public @FindBy(xpath="(//div[@class='fui-avatar-label'])[1]")
+	 WebElement sponsor_logo;
+	 
+	 public @FindBy(xpath="(//div[@class='fui-avatar-label'])[2]")
+	 WebElement banner_image;
+	 
+	public @FindBy(xpath="//select[@class='form-select']")
+	List<WebElement> spons_drop;
+	
+	 public @FindBy(xpath="//div[@class='mb-2 col-lg-12']//div[@aria-label='Edit text']")
+	 WebElement desc_field;
+	 
+	 public @FindBy(xpath="//button[normalize-space()='Submit']")
+	 WebElement submitButton;
+	 
+	 public @FindBy(xpath="//div[contains(text(),'Sponsor created successfully.')]")
+	 WebElement success_msg;
+	 
+	 
+	 
+	 
 	 
 	 
 	 
